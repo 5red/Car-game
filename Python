@@ -1,0 +1,26 @@
+command = ""
+started = False
+while True:
+    command = input("Enter your command here: ").lower()
+    if command == "start":
+        if started:
+            print("Already ON!")
+        else:
+            started = True
+            print("The engine is ON!")
+    if command == "stop":
+        if not started:
+            print("Already OFF!")
+        else:
+        started = False
+            print("The engine is OFF!")
+    elif command == "help":
+        print("""
+Type one of the items below to run or quit the program:
+start - to start
+stop - 
+quit ...
+""")
+    elif command == "quit":
+        print("You have successfully quited!")
+        break
